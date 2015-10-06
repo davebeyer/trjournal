@@ -23,6 +23,10 @@ Push changes to origin server (github.com is cloned as above) onto master branch
 
 ```git push origin master```
 
+or, assuming the current branch is the master branch, simply do:
+
+```git push```
+
 ## Updating local copy
 
 Update your local copy with latest changes in origin repo server
