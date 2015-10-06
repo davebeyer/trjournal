@@ -1,0 +1,2 @@
+cp -r node_modules/* client/assets/node_modules
+tsc

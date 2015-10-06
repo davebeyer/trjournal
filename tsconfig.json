@@ -1,0 +1,23 @@
+{
+  "version": "1.6.2",
+
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": false,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true
+  },
+
+  "exclude" : [
+    "node_modules",
+    "client/assets/node_modules"
+  ],
+
+
+  "//" : "compilerOption -- outDir : build -- module: system"
+}

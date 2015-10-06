@@ -1,0 +1,87 @@
+
+
+Actives page (home page):
+
+
+  Open Trades <Expand All> <Abbrevate>
+   
+    BB Nov Schwab (Open) 
+    BB Dec TDAmeritrade-1 (Open) 
+    VCondor Dec TD-Ameritrade-IRA (Open) 
+
+    <Trade name> <trade expiration> <Save new trade>
+
+
+Display first trade by clicking on it
+
+
+  Open Trades  <Expand All> <Abbrevate>
+   
+    BB Nov Schwab (Open) 
+      2 Oct 15: <Textbox for new or current entry>  <Save Entry>
+      1 Oct 15: Delta too high, cut deltas <edit>
+      29 Sep 15: Delta too low, made adj <edit>
+      
+
+    BB Dec TDAmeritrade-1 (Open) 
+    VCondor Dec TD-Ameritrade-IRA (Open) 
+
+    <Trade name> <trade expiration> <Save new trade>
+
+
+<Abbreviate> mode only shows entry rows for today plus most recent entry.
+
+
+=======================
+
+Document design:
+
+== OLD ==
+
+paths/keys cannot contain dots (in email adrs) and other chars:  ".", "#", "$", "[", or "]"
+
+Firebase-friendly:
+
+    { 
+
+        trades : [ 
+            {
+	        owner      : 'eactracker@gmail.com'
+	        strategy   : <strategy name>,
+                expiration : <string date/id>,
+                openDate   : <date str>,
+                status     : <'open'|'closed'>
+            },
+        ],
+
+        'entries' : [
+            {
+                owner       : 'eactracker@gmail.com'
+                strategy    : <strategy name>,
+                expiration  : <string date/id>,
+
+                noteDate    : <date str>,
+                note        : string
+             }
+        ]
+    }
+
+
+Trade doc type:
+
+   docType     - "trade"
+   docCreated  - Date
+   tradeId     - auto assigned globally number
+   tradeOwner  - Email adr
+   tradeName   - arbitrary string, like "MM" or "VCondor"
+   tradeExp    - arbitrary string, typically "Nov" or "Nov2"
+   tradeStatus - Open / closed
+
+Note entry doc type:
+
+   docType     - "entry"
+   docCreated  - Date
+   entryId     - auto assigned globally number
+   entryNote   - arbitrary string
+   
+   

@@ -1,0 +1,18 @@
+{
+  "name": "trjournal",
+  "version": "1.0.0",
+  "description": "web based trade journal",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ecosta",
+  "license": "ISC",
+  "dependencies": {
+    "angular2": "^2.0.0-alpha.37",
+    "bootstrap": "^3.3.5",
+    "es6-module-loader": "^0.17.8",
+    "firebase": "^2.3.1",
+    "systemjs": "^0.19.3",
+    "traceur": "0.0.91"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "firebase": "trjournal",
+  "public": "client",
+  "ignore": [
+    "firebase.json",
+    "**/.*"
+  ]
+}
