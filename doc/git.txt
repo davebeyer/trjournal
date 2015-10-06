@@ -1,0 +1,21 @@
+
+# Clone the repository
+git clone  https://github.com/davebeyer/trjournal
+
+# Check what changes you have in a local working copy
+git status
+git status -s  # abbreviated version
+
+# Commit local changes to local repository (skipping "staging")
+git commit -a -m "your commit message on what changes you made"
+
+# Push changes to origin server (github.com is cloned as above) onto master branch
+# (If it fails, may need to pull down latest changes first)
+git push origin master
+
+# Update your local copy with latest changes in origin repo server
+git pull
+
+
+
+
