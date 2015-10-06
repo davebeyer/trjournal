@@ -1,4 +1,6 @@
 *~
+.DS_Store
+
 /client/assets/node_modules/*
 
 /client/app/*.js
