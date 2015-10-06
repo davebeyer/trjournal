@@ -18,7 +18,7 @@ Commit local changes to local repository (skipping "staging")
 ```git commit -a -m "your commit message on what changes you made"```
 
 
-Push changes to origin server (github.com is cloned as above) onto master branch
+Push changes to origin server (github.com if cloned as above) onto master branch
 (If it fails, may need to pull down latest changes first)
 
 ```git push origin master```
