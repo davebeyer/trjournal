@@ -34,12 +34,3 @@ http://localhost:8097
 * Firebase
 * Bootstrap-CSS
 * node, npm, browserify, tsify, watchify, gulp
-
-
-
-
-
-
-
-
-

@@ -13,6 +13,12 @@ git status
 git status -s
 ```
 
+and see the changes:
+
+```
+git diff
+```
+
 Commit local changes to local repository (skipping "staging")
 
 ```git commit -a -m "your commit message on what changes you made"```
@@ -21,11 +27,12 @@ Commit local changes to local repository (skipping "staging")
 Push changes to origin server (github.com if cloned as above) onto master branch
 (If it fails, may need to pull down latest changes first)
 
+```git push```
+
+or, to specify this particular server and branch explicilty:
+
 ```git push origin master```
 
-or, assuming the current branch is the master branch, simply do:
-
-```git push```
 
 ## Updating local copy
 
@@ -55,9 +62,5 @@ Then, back in local copy
 
 ```
 git remote add origin https://github.com/davebeyer/trjournal.git
-git push -u origin master  # will ask for github username-email/password
+git push -u origin master  # may ask for github username-email/password
 ```
-
-
-
-
