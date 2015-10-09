@@ -15,7 +15,7 @@
 
   "exclude" : [
     "node_modules",
-    "client/assets/node_modules"
+    "client/node_modules"
   ],
 
 

@@ -1,15 +1,16 @@
 /// <reference path="../../typings/angular2/angular2.d.ts" />
 /// <reference path="../../typings/jquery/jquery.d.ts" />
 /// <reference path="../../typings/firebase/firebase.d.ts" />
+/// <reference path="../../typings/requirejs/require.d.ts" />
 /// <reference path="./main.ts" />
 /// <reference path="./jentries.ts" />
 
 import {Component, View, NgFor, EventEmitter} from 'angular2/angular2';
 
-var Dropdown       = require('./dropdown.js').Dropdown;
-var JournalEntries = require('./jentries.js').JournalEntries;
+var Dropdown       = require('./dropdown').Dropdown;
+var JournalEntries = require('./jentries').JournalEntries;
 
-var formatDatetime = require('assets/js/utils.js').formatDatetime;
+var formatDatetime = require('../assets/js/utils').formatDatetime;
 
 @Component({
     selector:   'open-trades',

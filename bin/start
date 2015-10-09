@@ -1,9 +1,0 @@
-pkill -f 'http-server client --cors -p 8097'
-pkill -f 'tsc -w'
-
-cp -r node_modules/* client/assets/node_modules
-tsc -w  &
-(nohup http-server client --cors -p 8097 > log/server.log)  &
-
-
-

@@ -1,12 +1,16 @@
 /// <reference path="../../typings/angular2/angular2.d.ts" />
 /// <reference path="../../typings/jquery/jquery.d.ts" />
 /// <reference path="../../typings/firebase/firebase.d.ts" />
+/// <reference path="../../typings/requirejs/require.d.ts" />
 /// <reference path="./tradesview.ts" />
+
+require("firebase");
+require("bootstrap");
 
 import {Component, View, bootstrap} from 'angular2/angular2';
 
-var OpenTrades = require('./tradesview.js').OpenTrades;
-var Firebase   = require('assets/node_modules/firebase/lib/firebase-web.js');
+var OpenTrades = require('./tradesview').OpenTrades;
+var Firebase   = require('firebase/lib/firebase-web.js');
 
 @Component({
     selector: 'my-app'
@@ -25,13 +29,14 @@ var Firebase   = require('assets/node_modules/firebase/lib/firebase-web.js');
         <h4 id="save-indicator" class="bg-success" style="position:fixed; padding:10px 20px; right:5px; top:5px; display:none">
           Saved
         </h4>
+
         `,
 
     directives: [OpenTrades]
 })
 
 class TradeJournal {
-    openTrades   : OpenTrades; 
+    openTrades   : any;   // (OpenTrades, but Typescript complaining)
     fbRef        : Firebase;
 
     constructor() {

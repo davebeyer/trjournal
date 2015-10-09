@@ -5,29 +5,26 @@
 
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
 
-    <!-- Better javascript -->
-    <script src="assets/node_modules/traceur/bin/traceur-runtime.js"></script>
-    <script src="assets/node_modules/es6-module-loader/dist/es6-module-loader.js"></script>
-    <script src="assets/node_modules/systemjs/dist/system.src.js"></script>
+    <!-- Better Javascript, needed by Angular2, and for System.import() below  -->
+    <script src="assets/libs/traceur-runtime.js"></script>
+    <script src="assets/libs/es6-module-loader.js"></script>
+    <script src="assets/libs/system.src.js"></script>
+
+    <!-- jquery -->
+    <script src="assets/libs/jquery-2.1.4.min.js"></script>
 
     <!-- Angular2 -->
-    <script src="assets/node_modules/angular2/bundles/angular2.dev.js"></script>
-
-    <!-- jquery, firebase, and bootstrap -->
-    <script src="assets/libs/jquery-2.1.4.min.js"></script>
-    <script src="assets/libs/firebase-2.2.1.js"></script>
-    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/libs/angular2.dev.js"></script>
 
     <!-- bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap.min.css"/>
   </head>
 
   <body>
     <my-app> </my-app>
 
-    <script>
-      System.import('app/main.js');
-    </script>
+    <script src="build/bundle.js"></script>
+
   </body>
 </html>
 
