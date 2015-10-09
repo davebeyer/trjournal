@@ -165,5 +165,7 @@ class TradeJournal {
     }
 }
 
-bootstrap(TradeJournal);
+$(document).ready(function() {
+    bootstrap(TradeJournal);
+});
 
