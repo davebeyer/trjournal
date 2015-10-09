@@ -32,8 +32,10 @@ gulp.task('watch-dev', function() {
 
     });
 
+    logForm({style : chalk.blue}, "Building bundle ... ");
+
     doBundle(w, function() {
-	logForm({style : chalk.blue}, "Watching for changes ... ");
+	logForm({style : chalk.blue}, "Done building, now watching for changes ... ");
     });
 });
 

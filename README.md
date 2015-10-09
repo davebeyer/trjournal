@@ -14,10 +14,16 @@ npm install
 
 ## Development
 
-To build, start a local http-server, and kickoff watchify/browserify to watch for & compile any changes, do:
+To build, start an http-server on localhost, and kickoff watchify/browserify to watch for & compile any changes, do:
 
 ```
 ./bin/start-dev
+```
+
+Then you should be able to visit:
+
+```
+http://localhost:8097
 ```
 
 ## Technologies Employed
