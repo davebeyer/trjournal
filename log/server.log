@@ -3,13 +3,11 @@ Available on:[39m
 [32m  http:127.0.0.1:8097[39m
 [32m  http:10.0.0.150:8097[39m
 Hit CTRL-C to stop the server
-[Fri, 09 Oct 2015 21:18:33 GMT] "[36mGET[39m [36m/[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.77.4 (KHTML, like Gecko) Version/7.0.5 Safari/537.77.4"
-[Fri, 09 Oct 2015 21:18:33 GMT] "[36mGET[39m [36m/assets/libs/traceur-runtime.js[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.77.4 (KHTML, like Gecko) Version/7.0.5 Safari/537.77.4"
-[Fri, 09 Oct 2015 21:18:33 GMT] "[36mGET[39m [36m/build/bundle.js[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.77.4 (KHTML, like Gecko) Version/7.0.5 Safari/537.77.4"
-[Fri, 09 Oct 2015 21:18:33 GMT] "[36mGET[39m [36m/assets/libs/es6-module-loader.js[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.77.4 (KHTML, like Gecko) Version/7.0.5 Safari/537.77.4"
-[Fri, 09 Oct 2015 21:18:33 GMT] "[36mGET[39m [36m/assets/libs/angular2.dev.js[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.77.4 (KHTML, like Gecko) Version/7.0.5 Safari/537.77.4"
-[Fri, 09 Oct 2015 21:18:33 GMT] "[36mGET[39m [36m/assets/libs/jquery-2.1.4.min.js[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.77.4 (KHTML, like Gecko) Version/7.0.5 Safari/537.77.4"
-[Fri, 09 Oct 2015 21:18:33 GMT] "[36mGET[39m [36m/assets/libs/system.src.js[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.77.4 (KHTML, like Gecko) Version/7.0.5 Safari/537.77.4"
-[Fri, 09 Oct 2015 21:18:34 GMT] "[36mGET[39m [36m/assets/libs/bootstrap.min.css[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.77.4 (KHTML, like Gecko) Version/7.0.5 Safari/537.77.4"
-[Fri, 09 Oct 2015 21:18:35 GMT] "[36mGET[39m [36m/assets/img/favicon.ico[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.77.4 (KHTML, like Gecko) Version/7.0.5 Safari/537.77.4"
-[Fri, 09 Oct 2015 21:18:35 GMT] "[31mGET[39m [31m/assets/img/favicon.ico[39m" Error ([31m404[39m): "[31mNot found[39m"
+[Fri, 09 Oct 2015 21:59:01 GMT] "[36mGET[39m [36m/[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+[Fri, 09 Oct 2015 21:59:01 GMT] "[36mGET[39m [36m/assets/libs/traceur-runtime.js[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+[Fri, 09 Oct 2015 21:59:01 GMT] "[36mGET[39m [36m/assets/libs/es6-module-loader.js[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+[Fri, 09 Oct 2015 21:59:01 GMT] "[36mGET[39m [36m/assets/libs/system.src.js[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+[Fri, 09 Oct 2015 21:59:01 GMT] "[36mGET[39m [36m/assets/libs/jquery-2.1.4.min.js[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+[Fri, 09 Oct 2015 21:59:01 GMT] "[36mGET[39m [36m/assets/libs/bootstrap.min.css[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+[Fri, 09 Oct 2015 21:59:01 GMT] "[36mGET[39m [36m/assets/libs/angular2.dev.js[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+[Fri, 09 Oct 2015 21:59:01 GMT] "[36mGET[39m [36m/build/bundle.js[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
