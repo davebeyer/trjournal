@@ -12,6 +12,15 @@ cd trjournal
 npm install
 ```
 
+## Development tools that may be needed
+
+```
+sudo npm install -g http-server
+sudo npm install -g gulp
+sudo npm install -g tsc    # However, currently using tsify plugin as part of the browserify process
+```
+
+
 ## Development
 
 To build, start an http-server on localhost, and kickoff watchify/browserify to watch for & compile any changes, do:

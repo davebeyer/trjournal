@@ -26,16 +26,16 @@ var formatDatetime = require('../assets/js/utils').formatDatetime;
           <div id="open-trades">
             <table class="table-striped table-hover" style="width:100%">
               <tr>
-                <th> Opened     </th>
                 <th> Strategy   </th>
                 <th> Expiration </th>
+                <th> Opened     </th>
                 <th> Account    </th>
               </tr>
               <tbody *ng-for="#trade of trades">
                 <tr style="cursor:pointer" (click)="toggleEntries(trade)">
-                  <td> {{trade.openDate}}   </td>
                   <td> {{trade.strategy}}   </td>
                   <td> {{trade.expiration}} </td>
+                  <td> {{trade.openDate}}   </td>
                   <td> {{trade.account}}    </td>
                 </tr>
                 <tr [id]="journalId(trade)" style="display:none">

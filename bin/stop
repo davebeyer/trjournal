@@ -1,2 +1,2 @@
 pkill -f 'http-server client --cors -p 8097'
-pkill -f 'gulp watch-dev'
+pkill -f 'gulp'
