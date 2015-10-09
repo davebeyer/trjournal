@@ -17,7 +17,7 @@ npm install
 ```
 sudo npm install -g http-server
 sudo npm install -g gulp
-sudo npm install -t tsc    # However, currently using tsify plugin as part of the browserify process
+sudo npm install -g tsc    # However, currently using tsify plugin as part of the browserify process
 ```
 
 
