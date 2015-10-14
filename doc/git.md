@@ -64,3 +64,21 @@ Then, back in local copy
 git remote add origin https://github.com/davebeyer/trjournal.git
 git push -u origin master  # may ask for github username-email/password
 ```
+
+## Creating a New Project starting from an Existing Git Project
+
+Clone the existing project into <existing project>, then purge git info:
+
+```
+cd <existing project>
+rm -rf .git
+```
+
+and initialize new git project:
+
+```
+git init
+git add -A    # adds all unignored files
+git commit -m "Initial commit"
+```
+
