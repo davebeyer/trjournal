@@ -49,13 +49,13 @@ class TradeJournal {
 
     // Called via 'initevent' event from OpenTrades component
     registerOpenTrades(openTradesComp) {
-        var self = this;
+        var _this = this;
 
-        self.openTrades = openTradesComp;
+        _this.openTrades = openTradesComp;
         
-        self.prepareDB(function() {
+        _this.prepareDB(function() {
             // Register parent (and other initialization) after DB is ready
-            self.openTrades.registerParent(self, self.fbRef);
+            _this.openTrades.registerParent(_this, _this.fbRef);
         });
     }
 
@@ -73,12 +73,12 @@ class TradeJournal {
     }
 
     prepareDB(doneCB) {
-        var self = this;
+        var _this = this;
         
-        self.fbRef.once('value', function(data) {
+        _this.fbRef.once('value', function(data) {
 
             if (data.child('vocabs').exists()) {
-                self.prepareDBForUser(doneCB);
+                _this.prepareDBForUser(doneCB);
             } else {
                 var dbSetup = {
                     vocabs : {
@@ -94,18 +94,18 @@ class TradeJournal {
                     }
                 };
 
-                self.fbRef.update( dbSetup, function() {
-                    self.prepareDBForUser(doneCB);
+                _this.fbRef.update( dbSetup, function() {
+                    _this.prepareDBForUser(doneCB);
                 }); 
             }
         });       
     }
 
     prepareDBForUser(doneCB) {
-        var self = this;
-        var userIdStr = self.dbUserId();
+        var _this = this;
+        var userIdStr = _this.dbUserId();
 
-        self.fbRef.once('value', function(data) {
+        _this.fbRef.once('value', function(data) {
 
             if (data.child(userIdStr).exists()) {
                 doneCB();
@@ -130,7 +130,7 @@ class TradeJournal {
                 };
 
                 // use set rather than update to init DB
-                self.fbRef.update( userSetup, function() {
+                _this.fbRef.update( userSetup, function() {
                     doneCB();
                 });
             }

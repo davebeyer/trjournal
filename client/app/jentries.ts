@@ -96,7 +96,7 @@ export class JournalEntries {
         var dbUserId      = this.parent.parent.dbUserId();
 	this.dbJournalRef = fbRef.child(dbUserId).child('entries').child(this.journalIdStr);
 
-        var self = this;
+        var _this = this;
 
 	var journalRef = 
 
@@ -104,18 +104,18 @@ export class JournalEntries {
             var entryData = {note : snapshot.val(), noteDate : snapshot.key()};
             console.log("registering new journal entry", entryData);
 
-            self.handleEntryDisplay(entryData);
+            _this.handleEntryDisplay(entryData);
         });
 
         // Watch for (remote) changes on todayNote
         this.dbJournalRef.on("child_changed", function(snapshot, prevChildKey) {
-            if (snapshot.key() != self.todayDate) {
+            if (snapshot.key() != _this.todayDate) {
                 // ignore, at least for now
                 return; 
             }
-            if (self.todayNote != snapshot.val()) {
-                self.todayNote = snapshot.val();
-                console.log("Remote update of today's note to", self.todayNote);
+            if (_this.todayNote != snapshot.val()) {
+                _this.todayNote = snapshot.val();
+                console.log("Remote update of today's note to", _this.todayNote);
             }
         });
     }
@@ -141,10 +141,10 @@ export class JournalEntries {
         var updateObj = {};
         updateObj[this.todayDate] =  value;
 
-        var self = this;
+        var _this = this;
 
         this.dbJournalRef.update(updateObj, function() {
-            self.parent.parent.flashSaved();
+            _this.parent.parent.flashSaved();
         });
     }
 }

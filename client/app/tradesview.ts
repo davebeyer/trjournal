@@ -164,23 +164,23 @@ export class OpenTrades {
         
         this.userId = parent.userId();
 
-        var self    = this;
+        var _this    = this;
 
         // Init vocabs for dropdown lists
-        self.fbRef.child('vocabs').once('value', function(snapshot) {
+        _this.fbRef.child('vocabs').once('value', function(snapshot) {
             var data = snapshot.val();
             var value;
             var invalidChars;
             for (value in data.accounts) {
-                invalidChars = self.invalidIdCharsFriendly(value);
+                invalidChars = _this.invalidIdCharsFriendly(value);
                 if (invalidChars) {
                     alert(`Warning, invalid characters (${invalidChars}) will be removed for 'accounts' vocabulary entry "${value}."`);
-                    value = self.validIdChars(value);
+                    value = _this.validIdChars(value);
                 }
-                self.accountVocab.push(value);
+                _this.accountVocab.push(value);
             }
             for (value in data.strategies) {
-                self.strategyVocab.push(value);
+                _this.strategyVocab.push(value);
             }
         });
 
@@ -191,11 +191,11 @@ export class OpenTrades {
         // trigger once for each child present initially (not JUST when new children are added).
         //
 
-        var dbUserId = self.parent.dbUserId();
+        var dbUserId = _this.parent.dbUserId();
 
-        self.fbRef.child(dbUserId).child('trades').on('child_added', function(tradeData, prevChildKey) {
+        _this.fbRef.child(dbUserId).child('trades').on('child_added', function(tradeData, prevChildKey) {
             console.log("registering new trade", tradeData);
-            self.handleTradeDisplay(tradeData.val());
+            _this.handleTradeDisplay(tradeData.val());
         });
     }
 
@@ -288,11 +288,11 @@ export class OpenTrades {
 
         var dbUserId   = this.parent.dbUserId();
         var tradeIdStr = this.tradeIdStr(newTradeObj);
-        var self       = this;
+        var _this       = this;
 
         this.fbRef.child(dbUserId).child('trades').once('value', function(data) {
             if (data.child(tradeIdStr).exists()) {
-                self.newTradeErr = `Sorry, you have already used this combination of strategy_expiration_account (${tradeIdStr}).`;
+                _this.newTradeErr = `Sorry, you have already used this combination of strategy_expiration_account (${tradeIdStr}).`;
             } else {
                 //
                 // Proceed with adding new trade to DB
@@ -304,8 +304,8 @@ export class OpenTrades {
                 
                 dbObj[tradeIdStr] = newTradeObj;
 
-                self.fbRef.child(dbUserId).child('trades').update(dbObj, function() {
-                    self.parent.flashSaved();
+                _this.fbRef.child(dbUserId).child('trades').update(dbObj, function() {
+                    _this.parent.flashSaved();
                 });
             }
         });
