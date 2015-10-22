@@ -1,11 +1,12 @@
 /// <reference path="../../typings/angular2/angular2.d.ts" />
-/// <reference path="../../typings/jquery/jquery.d.ts" />
 /// <reference path="../../typings/firebase/firebase.d.ts" />
 /// <reference path="../../typings/requirejs/require.d.ts" />
 /// <reference path="./tradesview.ts" />
 
 require("firebase");
 require("bootstrap");
+
+declare var jQuery:any;
 
 import {Component, View, bootstrap} from 'angular2/angular2';
 
@@ -159,13 +160,14 @@ class TradeJournal {
 
     flashSaved() {
         // using jquery
-        var $saved = $("#save-indicator");
+        var $saved = jQuery("#save-indicator");
         $saved.stop(true, true).show();
         $saved.fadeOut(2500);
     }
 }
 
-$(document).ready(function() {
+// similar to jQuery(document).ready(), but doesn't work in old IE browsers
+document.addEventListener('DOMContentLoaded', function(){ 
     bootstrap(TradeJournal);
 });
 

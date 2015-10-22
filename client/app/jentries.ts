@@ -1,9 +1,10 @@
 /// <reference path="../../typings/angular2/angular2.d.ts" />
-/// <reference path="../../typings/jquery/jquery.d.ts" />
 /// <reference path="../../typings/firebase/firebase.d.ts" />
 /// <reference path="../../typings/requirejs/require.d.ts" />
 
 import {Component, View, NgFor, NgIf, EventEmitter} from 'angular2/angular2';
+
+declare var jQuery:any;
 
 var formatDate = require('../assets/js/utils').formatDate;
 

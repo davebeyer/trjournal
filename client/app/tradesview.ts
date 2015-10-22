@@ -1,11 +1,12 @@
 /// <reference path="../../typings/angular2/angular2.d.ts" />
-/// <reference path="../../typings/jquery/jquery.d.ts" />
 /// <reference path="../../typings/firebase/firebase.d.ts" />
 /// <reference path="../../typings/requirejs/require.d.ts" />
 /// <reference path="./main.ts" />
 /// <reference path="./jentries.ts" />
 
 import {Component, View, NgFor, EventEmitter} from 'angular2/angular2';
+
+declare var jQuery:any;
 
 var Dropdown       = require('./dropdown').Dropdown;
 var JournalEntries = require('./jentries').JournalEntries;
@@ -248,7 +249,7 @@ export class OpenTrades {
             }
         }
 
-        expiration = $.trim(expiration);
+        expiration = jQuery.trim(expiration);
 
         if (!expiration) {
             if (this.newTradeErr) {
@@ -324,7 +325,7 @@ export class OpenTrades {
     toggleEntries(tradeObj) {
         // using jquery to toggle visibility of associated journal entries
         // Unfortunately, can't use slideUp/Down animations on table rows
-        var $obj = $('#' + this.journalId(tradeObj));
+        var $obj = jQuery('#' + this.journalId(tradeObj));
         if ($obj.is(":visible")) {
             $obj.fadeOut();
         } else {
@@ -345,9 +346,9 @@ export class OpenTrades {
     }
 
     tradeIdStr(tradeObj) {
-        return $.trim(tradeObj.strategy).toLowerCase()   + '_' + 
-               $.trim(tradeObj.expiration).toLowerCase() + '_' + 
-               $.trim(tradeObj.account).toLowerCase();
+        return jQuery.trim(tradeObj.strategy).toLowerCase()   + '_' + 
+               jQuery.trim(tradeObj.expiration).toLowerCase() + '_' + 
+               jQuery.trim(tradeObj.account).toLowerCase();
     }
 
     invalidIdCharsFriendly(value) {
