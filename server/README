@@ -1,0 +1,2 @@
+Because index.html is static, and to allow it to be served statically
+from the public directory, it is located in client/public.

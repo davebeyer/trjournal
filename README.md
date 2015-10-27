@@ -9,6 +9,7 @@ To clone and build, do:
 ```
 git clone  https://github.com/davebeyer/trjournal
 cd trjournal
+tsd install
 npm install
 ```
 

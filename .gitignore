@@ -2,14 +2,10 @@
 .DS_Store
 
 node_modules/*
+typings/*
 
-/client/assets/node_modules/*
-
-/client/app/*.js
-/client/app/*.js.map
-
-/client/assets/js/utils.js
-/client/assets/js/utils.js.map
-
+# Note that some folders, like log, have their own .gitignore file,
+# e.g., (for the log folder case) to ensure that the folder is checked
+# into Git minus any of its contents (other than the .gitignore file)
 
 

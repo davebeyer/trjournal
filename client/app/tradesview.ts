@@ -1,6 +1,4 @@
-/// <reference path="../../typings/angular2/angular2.d.ts" />
-/// <reference path="../../typings/firebase/firebase.d.ts" />
-/// <reference path="../../typings/requirejs/require.d.ts" />
+/// <reference path="../../typings/tsd.d.ts" />
 /// <reference path="./main.ts" />
 /// <reference path="./jentries.ts" />
 
@@ -11,7 +9,7 @@ declare var jQuery:any;
 var Dropdown       = require('./dropdown').Dropdown;
 var JournalEntries = require('./jentries').JournalEntries;
 
-var formatDatetime = require('../assets/js/utils').formatDatetime;
+var formatDatetime = require('../public/js/utils').formatDatetime;
 
 @Component({
     selector:   'open-trades',

@@ -1,5 +1,4 @@
-/// <reference path="../../typings/angular2/angular2.d.ts" />
-/// <reference path="../../typings/firebase/firebase.d.ts" />
+/// <reference path="../../typings/tsd.d.ts" />
 
 import {Component, View, NgFor, EventEmitter} from 'angular2/angular2';
 

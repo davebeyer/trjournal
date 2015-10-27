@@ -54,10 +54,10 @@ function doBundle(bundler, doneCB) {
 	})
 
         // vinyl-source-stream makes the bundle compatible with gulp
-        .pipe(source('bundle.js'))
+        .pipe(source('trjournal.js'))
 
         // Output the file
-        .pipe(gulp.dest('./client/build'));
+        .pipe(gulp.dest('./client/public/build'));
 }
 
 gulp.task('default', ['watch-dev']);

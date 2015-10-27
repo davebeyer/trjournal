@@ -1,0 +1,13 @@
+pkill -f 'http-server client/public --cors -p 8097'
+pkill -f 'gulp'
+
+npm install
+tsd install
+(gulp watch-dev) &
+
+(nohup http-server client/public --cors -p 8097 > server/log/server.log)  &
+echo "Server started on http://localhost:8097"
+
+
+
+
